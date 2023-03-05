@@ -2,8 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:organico/view/screens/home_page.dart';
-import 'package:organico/view/sing_up_page.dart';
+import 'package:organico/view/pages/bottomNavigationBar.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -13,11 +12,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-   @override
+  @override
   void initState() {
-    checkUser();
+    Future.delayed(Duration(seconds: 4)).then(
+      (value) {
+        checkUser();
+      },
+    );
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,10 +43,10 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-   void checkUser() {
+  void checkUser() {
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user != null) {
-         Navigator.popAndPushNamed(context, 'homePage');
+        Navigator.popAndPushNamed(context, 'NavigationBarPage');
       } else {
         Navigator.popAndPushNamed(context, 'singUpPage');
       }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:organico/view/screens/home_page.dart';
-import 'package:organico/view/sing_in_page.dart';
-import 'package:organico/view/sing_up_page.dart';
-import 'package:organico/view/spalsh_screen.dart';
+import 'package:organico/view/auth/sing_in_page.dart';
+import 'package:organico/view/pages/bottomNavigationBar.dart';
+import '../view/auth/sing_up_page.dart';
+import '../view/auth/spalsh_screen.dart';
+import '../view/screens/home_screen.dart';
 
 class RouterGenerator {
   static final RouterGenerator _generator = RouterGenerator._init();
@@ -12,13 +13,15 @@ class RouterGenerator {
   Route? onGenerate(RouteSettings settings) {
     switch (settings.name) {
       case 'homePage':
-        return _navigate(const HomePage());
+        return _navigate(const MainPage());
       case 'singInPage':
         return _navigate(const SingInPage());
       case 'singUpPage':
         return _navigate(const SingUpPage());
       case 'splashScreen':
         return _navigate(const SplashScreen());
+        case 'NavigationBarPage':
+        return _navigate( HomePage());
     }
   }
 

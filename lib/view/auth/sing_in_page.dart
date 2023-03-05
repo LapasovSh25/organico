@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:organico/provider/auth/sing_in_provider.dart';
-import 'package:organico/view/screens/home_page.dart';
+import 'package:organico/view/pages/bottomNavigationBar.dart';
 import 'package:provider/provider.dart';
 
 class SingInPage extends StatelessWidget {
@@ -93,7 +93,7 @@ class SingInPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 266, right: 20, top: 24),
               child: InkWell(
                 onTap: () async {
-                  Navigator.pushNamed(context, 'singUpPage');
+                  Navigator.popAndPushNamed(context, 'singUpPage');
                 },
                 child: Text(
                   "Forgot Password",
@@ -114,7 +114,7 @@ class SingInPage extends StatelessWidget {
                   onPressed: () async {
                     await context.read<SingInProvider>().singIn().then((value) {
                       if (value == true) {
-                       Navigator.pushNamed(context, 'homePage');
+                       Navigator.popAndPushNamed(context, 'NavigationBarPage');
                       }
                     });
                   },

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:organico/provider/auth/sing_up_provider.dart';
-import 'package:organico/view/screens/home_page.dart';
-import 'package:organico/view/sing_in_page.dart';
+import 'package:organico/view/pages/bottomNavigationBar.dart';
 import 'package:provider/provider.dart';
 
 class SingUpPage extends StatefulWidget {
@@ -174,7 +173,7 @@ class _SingUpPageState extends State<SingUpPage> {
                   onPressed: () async {
                     await context.read<SingUpProvider>().singUp().then((value) {
                       if (value == true) {
-                       Navigator.pushNamed(context, 'homePage');
+                       Navigator.popAndPushNamed(context, 'NavigationBarPage');
                       }
                     });
                   },
@@ -211,7 +210,7 @@ class _SingUpPageState extends State<SingUpPage> {
                     borderRadius: BorderRadius.circular(100)),
                 child: FloatingActionButton.extended(
                   onPressed: () {
-                  Navigator.pushNamed(context, 'singInPage');
+                  Navigator.popAndPushNamed(context, 'singInPage');
                   },
                   label: Text(
                     "Sing In",
