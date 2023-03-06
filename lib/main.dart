@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:organico/provider/auth/sing_in_provider.dart';
 import 'package:organico/provider/auth/sing_up_provider.dart';
 import 'package:organico/provider/home/home_page_provider.dart';
+import 'package:organico/provider/info_page_provider/info_page_provider.dart';
 import 'package:organico/routes/router.dart';
 import 'package:provider/provider.dart';
 
@@ -19,6 +20,9 @@ void main(List<String> args) async{
       ),
        ChangeNotifierProvider(
         create: (context) => HomeProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => InfoPageProvider(),
       ),
     ],
     child: OrganicoApp(),

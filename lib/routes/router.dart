@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:organico/view/auth/sing_in_page.dart';
 import 'package:organico/view/pages/bottomNavigationBar.dart';
+import 'package:organico/view/pages/coupons_page.dart';
+import 'package:organico/view/pages/info_page.dart';
 import '../view/auth/sing_up_page.dart';
 import '../view/auth/spalsh_screen.dart';
+import '../view/pages/vegatables_category_page.dart';
 import '../view/screens/home_screen.dart';
 
 class RouterGenerator {
@@ -20,8 +23,14 @@ class RouterGenerator {
         return _navigate(const SingUpPage());
       case 'splashScreen':
         return _navigate(const SplashScreen());
-        case 'NavigationBarPage':
-        return _navigate( HomePage());
+      case 'NavigationBarPage':
+        return _navigate(HomePage());
+      case 'InfoPage':
+        return _navigate(const InfoPage());
+      case 'VegatablesPage':
+        return _navigate(const VegetablesPage());
+      case 'CuponsPage':
+        return _navigate(const CuponsPage());
     }
   }
 

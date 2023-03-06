@@ -68,6 +68,9 @@ class _MainPageState extends State<MainPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 32),
                 child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'CuponsPage');
+                  },
                   child: Row(
                     children: [
                       Container(
@@ -137,22 +140,29 @@ class _MainPageState extends State<MainPage> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Container(
-                        width: 123,
-                        height: 134,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.purple[50]),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.asset(categoryImgList[index]),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(categoryNameList[index])
-                          ],
+                      child: InkWell(
+                        onTap: () {
+                          if (index == 0) {
+                            Navigator.pushNamed(context, 'VegatablesPage');
+                          }
+                        },
+                        child: Container(
+                          width: 123,
+                          height: 134,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.purple[50]),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(categoryImgList[index]),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Text(categoryNameList[index])
+                            ],
+                          ),
                         ),
                       ),
                     );
@@ -188,61 +198,70 @@ class _MainPageState extends State<MainPage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 196,
-                      height: 242,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.purple[50]),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset("assets/paprika.png"),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              "Paprika",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 16),
-                            ),
-                            Text(
-                              "Vegashop",
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color.fromRGBO(105, 105, 116, 1),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'InfoPage');
+                      },
+                      child: Container(
+                        width: 196,
+                        height: 242,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.purple[50]),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset("assets/paprika.png"),
+                              SizedBox(
+                                height: 15,
                               ),
-                            ),
-                            SizedBox(
-                              height: 26,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "S4.99 /Kg",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 16),
+                              Text(
+                                "Paprika",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16),
+                              ),
+                              Text(
+                                "Vegashop",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color.fromRGBO(105, 105, 116, 1),
                                 ),
-                                Container(
-                                  width: 36,
-                                  height: 36,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: Color.fromRGBO(46, 204, 113, 1)),
-                                  child: Icon(Icons.add, color: Colors.white,),
-                                ),
-                              ],
-                            )
-                          ],
+                              ),
+                              SizedBox(
+                                height: 26,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "S4.99 /Kg",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 16),
+                                  ),
+                                  Container(
+                                    width: 36,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        color: Color.fromRGBO(46, 204, 113, 1)),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -299,7 +318,10 @@ class _MainPageState extends State<MainPage> {
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: Color.fromRGBO(46, 204, 113, 1)),
-                                  child: Icon(Icons.add, color: Colors.white,),
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ],
                             )
