@@ -25,7 +25,7 @@ void main(List<String> args) async{
         create: (context) => InfoPageProvider(),
       ),
     ],
-    child: OrganicoApp(),
+    child: const OrganicoApp(),
   ));
 }
 class OrganicoApp extends StatelessWidget {

@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3)).then(
+    Future.delayed(const Duration(seconds: 3)).then(
       (value) {
         checkUser();
       },
@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset("assets/Logo.png"),
-          Text(
+          const Text(
             "Organico",
             style: TextStyle(
               fontSize: 24,

@@ -7,7 +7,7 @@ import 'package:organico/view/screens/home_screen.dart';
 import 'package:organico/view/screens/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

@@ -9,7 +9,7 @@ class CuponsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Your Coupon',
           style: TextStyle(
             color: Colors.black,
@@ -17,7 +17,7 @@ class CuponsPage extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -29,7 +29,7 @@ class CuponsPage extends StatelessWidget {
               width: 374,
               height: 91,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(170, 0, 35, 0.15),
+                color: const Color.fromRGBO(170, 0, 35, 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
@@ -79,7 +79,7 @@ class CuponsPage extends StatelessWidget {
                 width: 374,
                 height: 91,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(170, 0, 35, 0.15),
+                  color: const Color.fromRGBO(170, 0, 35, 0.15),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
@@ -128,7 +128,7 @@ class CuponsPage extends StatelessWidget {
               width: 374,
               height: 91,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(170, 0, 35, 0.15),
+                color: const Color.fromRGBO(170, 0, 35, 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(

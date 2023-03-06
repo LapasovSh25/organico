@@ -14,13 +14,13 @@ class InfoPage extends StatelessWidget {
       builder: (context, child) {
         return Scaffold(
           appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.black),
+            iconTheme: const IconThemeData(color: Colors.black),
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.favorite_outline,
                   color: Colors.black,
                 ),
@@ -44,19 +44,19 @@ class InfoPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
-                Text(
+                const Text(
                   "Paprika",
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 24, fontWeight: FontWeight.w700),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 185),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 185),
                       child: Text(
                         "Vegshop",
                         style: TextStyle(
@@ -110,25 +110,25 @@ class InfoPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 48,
                 ),
-                Text(
+                const Text(
                   'Details',
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 18, fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                Text(
+                const Text(
                   'Paprika is a fruit-producing plant that tastes sweet and slightly spicy from the eggplant or Solanaceae tribe. Its green, yellow, red, or purple fru..Read more',
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 26,
                 ),
                 Row(
@@ -137,7 +137,7 @@ class InfoPage extends StatelessWidget {
                         width: 44,
                         height: 44,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(233, 240, 247, 1),
+                          color: const Color.fromRGBO(233, 240, 247, 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const Image(
@@ -168,7 +168,7 @@ class InfoPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 Row(
@@ -177,7 +177,7 @@ class InfoPage extends StatelessWidget {
                         width: 44,
                         height: 44,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(233, 240, 247, 1),
+                          color: const Color.fromRGBO(233, 240, 247, 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const Image(
@@ -208,7 +208,7 @@ class InfoPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Row(
@@ -219,21 +219,21 @@ class InfoPage extends StatelessWidget {
                       height: 52,
                       child: FloatingActionButton.extended(
                         onPressed: () {},
-                        label: Text(
+                        label: const Text(
                           "Add to cart",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
-                        backgroundColor: Color.fromRGBO(170, 0, 35, 1),
+                        backgroundColor: const Color.fromRGBO(170, 0, 35, 1),
                       ),
                     ),
                      Container(
                         width: 52,
                         height: 52,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(233, 240, 247, 1),
+                          color: const Color.fromRGBO(233, 240, 247, 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const Image(

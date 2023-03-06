@@ -25,10 +25,10 @@ class SingInPage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 33, vertical: 46),
+              padding: const EdgeInsets.symmetric(horizontal: 33, vertical: 46),
               child: Image.asset("assets/welcomePic.png"),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(right: 307, left: 20),
               child: Text(
                 "Welcome",
@@ -38,11 +38,11 @@ class SingInPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
+            const Padding(
+              padding: EdgeInsets.only(left: 20),
               child: Text(
                 "Welcome to Organico Mobile Apps. Please fill in the field below to sign in. ",
                 style: TextStyle(
@@ -51,7 +51,7 @@ class SingInPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Padding(
@@ -59,9 +59,9 @@ class SingInPage extends StatelessWidget {
               child: TextFormField(
                 controller: context.watch<SingInProvider>().emailController,
                 decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.email_outlined),
+                    prefixIcon: const Icon(Icons.email_outlined),
                     hintText: "Email",
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                         color: Color.fromRGBO(146, 146, 157, 1)),
@@ -76,10 +76,10 @@ class SingInPage extends StatelessWidget {
               child: TextFormField(
                 controller: context.watch<SingInProvider>().passwordController,
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock_outline_rounded),
-                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                  prefixIcon: const Icon(Icons.lock_outline_rounded),
+                  suffixIcon: const Icon(Icons.remove_red_eye_outlined),
                   hintText: "Password",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Color.fromRGBO(146, 146, 157, 1)),
@@ -95,7 +95,7 @@ class SingInPage extends StatelessWidget {
                 onTap: () async {
                   Navigator.popAndPushNamed(context, 'singUpPage');
                 },
-                child: Text(
+                child: const Text(
                   "Forgot Password",
                   style: TextStyle(
                     fontSize: 16,
@@ -119,15 +119,15 @@ class SingInPage extends StatelessWidget {
                     });
                   },
                   label: !context.watch<SingInProvider>().isLoading
-                      ? Text(
+                      ? const Text(
                           "Sign In",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                           ),
                         )
-                      : CircularProgressIndicator.adaptive(),
-                  backgroundColor: Color.fromRGBO(170, 0, 35, 1),
+                      : const CircularProgressIndicator.adaptive(),
+                  backgroundColor: const Color.fromRGBO(170, 0, 35, 1),
                 ),
               ),
             ),

@@ -29,8 +29,8 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 24, right: 140, left: 140),
+              const Padding(
+                padding: EdgeInsets.only(top: 24, right: 140, left: 140),
                 child: Text(
                   "Your Location",
                   style: TextStyle(
@@ -42,7 +42,7 @@ class _MainPageState extends State<MainPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Bandung, Cimahi",
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.keyboard_arrow_down_outlined),
+                    icon: const Icon(Icons.keyboard_arrow_down_outlined),
                   ),
                 ],
               ),
@@ -77,7 +77,7 @@ class _MainPageState extends State<MainPage> {
                           width: 44,
                           height: 44,
                           decoration: BoxDecoration(
-                            color: Color.fromRGBO(233, 240, 247, 1),
+                            color: const Color.fromRGBO(233, 240, 247, 1),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: const Image(
@@ -157,7 +157,7 @@ class _MainPageState extends State<MainPage> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Image.asset(categoryImgList[index]),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
                               Text(categoryNameList[index])
@@ -216,31 +216,31 @@ class _MainPageState extends State<MainPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.asset("assets/paprika.png"),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
-                              Text(
+                              const Text(
                                 "Paprika",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w600,
                                     fontSize: 16),
                               ),
-                              Text(
+                              const Text(
                                 "Vegashop",
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: Color.fromRGBO(105, 105, 116, 1),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 26,
                               ),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "S4.99 /Kg",
                                     style: TextStyle(
                                         color: Colors.black,
@@ -252,8 +252,8 @@ class _MainPageState extends State<MainPage> {
                                     height: 36,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(10),
-                                        color: Color.fromRGBO(46, 204, 113, 1)),
-                                    child: Icon(
+                                        color: const Color.fromRGBO(46, 204, 113, 1)),
+                                    child: const Icon(
                                       Icons.add,
                                       color: Colors.white,
                                     ),
@@ -265,7 +265,7 @@ class _MainPageState extends State<MainPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     Container(
@@ -282,30 +282,30 @@ class _MainPageState extends State<MainPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset(categoryImgList[1]),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
-                            Text(
+                            const Text(
                               "Banana",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16),
                             ),
-                            Text(
+                            const Text(
                               "Fruitmarket",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Color.fromRGBO(105, 105, 116, 1),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 45,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   "S4.68 /Kg",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -317,8 +317,8 @@ class _MainPageState extends State<MainPage> {
                                   height: 36,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: Color.fromRGBO(46, 204, 113, 1)),
-                                  child: Icon(
+                                      color: const Color.fromRGBO(46, 204, 113, 1)),
+                                  child: const Icon(
                                     Icons.add,
                                     color: Colors.white,
                                   ),

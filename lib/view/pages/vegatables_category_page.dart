@@ -9,13 +9,13 @@ class VegetablesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.filter_alt_outlined,
               color: Colors.black,
             ),
@@ -48,30 +48,30 @@ class VegetablesPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.asset("assets/paprika.png"),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
-                            Text(
+                            const Text(
                               "Paprika",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16),
                             ),
-                            Text(
+                            const Text(
                               "Vegashop",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Color.fromRGBO(105, 105, 116, 1),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 26,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   "S4.99 /Kg",
                                   style: TextStyle(
                                       color: Colors.black,
@@ -83,8 +83,8 @@ class VegetablesPage extends StatelessWidget {
                                   height: 36,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: Color.fromRGBO(46, 204, 113, 1)),
-                                  child: Icon(
+                                      color: const Color.fromRGBO(46, 204, 113, 1)),
+                                  child: const Icon(
                                     Icons.add,
                                     color: Colors.white,
                                   ),
@@ -96,7 +96,7 @@ class VegetablesPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
                   Container(
@@ -113,30 +113,30 @@ class VegetablesPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset("assets/broccoli.png"),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             "Broccoli",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16),
                           ),
-                          Text(
+                          const Text(
                             "Popey Shop",
                             style: TextStyle(
                               fontSize: 14,
                               color: Color.fromRGBO(105, 105, 116, 1),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 45,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "S4.68 /Kg",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -148,8 +148,8 @@ class VegetablesPage extends StatelessWidget {
                                 height: 36,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: Color.fromRGBO(46, 204, 113, 1)),
-                                child: Icon(
+                                    color: const Color.fromRGBO(46, 204, 113, 1)),
+                                child: const Icon(
                                   Icons.add,
                                   color: Colors.white,
                                 ),
@@ -162,7 +162,7 @@ class VegetablesPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -181,30 +181,30 @@ class VegetablesPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset("assets/lettuce.png"),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             "Lettuce",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16),
                           ),
-                          Text(
+                          const Text(
                             "Vegmarket",
                             style: TextStyle(
                               fontSize: 14,
                               color: Color.fromRGBO(105, 105, 116, 1),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 26,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "S3.40 /Kg",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -216,8 +216,8 @@ class VegetablesPage extends StatelessWidget {
                                 height: 36,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: Color.fromRGBO(46, 204, 113, 1)),
-                                child: Icon(
+                                    color: const Color.fromRGBO(46, 204, 113, 1)),
+                                child: const Icon(
                                   Icons.add,
                                   color: Colors.white,
                                 ),
@@ -228,7 +228,7 @@ class VegetablesPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
                   Container(
@@ -245,30 +245,30 @@ class VegetablesPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset("assets/potato.png"),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
-                          Text(
+                          const Text(
                             "Potato",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16),
                           ),
-                          Text(
+                          const Text(
                             "Anyshop",
                             style: TextStyle(
                               fontSize: 14,
                               color: Color.fromRGBO(105, 105, 116, 1),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "S4.21 /Kg",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -280,8 +280,8 @@ class VegetablesPage extends StatelessWidget {
                                 height: 36,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: Color.fromRGBO(46, 204, 113, 1)),
-                                child: Icon(
+                                    color: const Color.fromRGBO(46, 204, 113, 1)),
+                                child: const Icon(
                                   Icons.add,
                                   color: Colors.white,
                                 ),
@@ -294,7 +294,7 @@ class VegetablesPage extends StatelessWidget {
                   ),
                 ],
               ),
-               SizedBox(
+               const SizedBox(
                             height: 20,
                           ),
                           Row(
@@ -313,31 +313,31 @@ class VegetablesPage extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Image.asset("assets/carrot.png"),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 15,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Carrot",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16),
                                       ),
-                                      Text(
+                                      const Text(
                                         "Popey Shop",
                                         style: TextStyle(
                                           fontSize: 14,
                                           color: Color.fromRGBO(105, 105, 116, 1),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 26,
                                       ),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Text(
+                                          const Text(
                                             "S4.99 /Kg",
                                             style: TextStyle(
                                                 color: Colors.black,
@@ -350,9 +350,9 @@ class VegetablesPage extends StatelessWidget {
                                             decoration: BoxDecoration(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
-                                                color: Color.fromRGBO(
+                                                color: const Color.fromRGBO(
                                                     46, 204, 113, 1)),
-                                            child: Icon(
+                                            child: const Icon(
                                               Icons.add,
                                               color: Colors.white,
                                             ),
@@ -363,7 +363,7 @@ class VegetablesPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 12,
                               ),
                               Container(
@@ -380,31 +380,31 @@ class VegetablesPage extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Image.asset("assets/onion.png"),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 15,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Red Onion",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16),
                                       ),
-                                      Text(
+                                      const Text(
                                         "Vegytail",
                                         style: TextStyle(
                                           fontSize: 14,
                                           color: Color.fromRGBO(105, 105, 116, 1),
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 30,
                                       ),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Text(
+                                          const Text(
                                             "S3.30 /Kg",
                                             style: TextStyle(
                                                 color: Colors.black,
@@ -417,9 +417,9 @@ class VegetablesPage extends StatelessWidget {
                                             decoration: BoxDecoration(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
-                                                color: Color.fromRGBO(
+                                                color: const Color.fromRGBO(
                                                     46, 204, 113, 1)),
-                                            child: Icon(
+                                            child: const Icon(
                                               Icons.add,
                                               color: Colors.white,
                                             ),

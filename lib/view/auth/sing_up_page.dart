@@ -23,7 +23,7 @@ class _SingUpPageState extends State<SingUpPage> {
         MaterialState.focused,
       };
       if (states.any(interactiveStates.contains)) {
-        return Color.fromRGBO(146, 146, 157, 1);
+        return const Color.fromRGBO(146, 146, 157, 1);
       }
       return Colors.green;
     }
@@ -42,7 +42,7 @@ class _SingUpPageState extends State<SingUpPage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Text(
+        title: const Text(
           "New Registration",
           style: TextStyle(color: Colors.black),
         ),
@@ -51,8 +51,8 @@ class _SingUpPageState extends State<SingUpPage> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               child: Text(
                 "It looks like you don’t have an account on this number. Please let us know some information for a secure service.",
                 style: TextStyle(
@@ -62,8 +62,8 @@ class _SingUpPageState extends State<SingUpPage> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                   bottom: 10, top: 16, right: 310, left: 20),
               child: Text(
                 "Full Name",
@@ -78,7 +78,7 @@ class _SingUpPageState extends State<SingUpPage> {
               child: TextFormField(
                 decoration: InputDecoration(
                     hintText: "Full Name",
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                         color: Color.fromRGBO(146, 146, 157, 1)),
@@ -86,8 +86,8 @@ class _SingUpPageState extends State<SingUpPage> {
                         borderRadius: BorderRadius.circular(100))),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                   top: 16, bottom: 10, right: 340, left: 20),
               child: Text(
                 "Email",
@@ -102,9 +102,9 @@ class _SingUpPageState extends State<SingUpPage> {
               child: TextFormField(
                 controller: context.watch<SingUpProvider>().emailController,
                 decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.email_outlined),
+                    prefixIcon: const Icon(Icons.email_outlined),
                     hintText: "Email",
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
                         color: Color.fromRGBO(146, 146, 157, 1)),
@@ -112,8 +112,8 @@ class _SingUpPageState extends State<SingUpPage> {
                         borderRadius: BorderRadius.circular(100))),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                   bottom: 10, top: 16, right: 320, left: 20),
               child: Text(
                 "Password",
@@ -128,10 +128,10 @@ class _SingUpPageState extends State<SingUpPage> {
               child: TextFormField(
                 controller: context.watch<SingUpProvider>().passwordController,
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.lock_outline_rounded),
-                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                  prefixIcon: const Icon(Icons.lock_outline_rounded),
+                  suffixIcon: const Icon(Icons.remove_red_eye_outlined),
                   hintText: "Password",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Color.fromRGBO(146, 146, 157, 1)),
@@ -160,7 +160,7 @@ class _SingUpPageState extends State<SingUpPage> {
                       },
                     ),
                   ),
-                  Text("I accept the Terms of Use and Privacy Policy")
+                  const Text("I accept the Terms of Use and Privacy Policy")
                 ],
               ),
             ),
@@ -178,20 +178,20 @@ class _SingUpPageState extends State<SingUpPage> {
                     });
                   },
                   label: !context.watch<SingUpProvider>().isLoading
-                      ? Text(
+                      ? const Text(
                           "Sign Up",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,
                           ),
                         )
-                      : CircularProgressIndicator.adaptive(),
-                  backgroundColor: Color.fromRGBO(170, 0, 35, 1),
+                      : const CircularProgressIndicator.adaptive(),
+                  backgroundColor: const Color.fromRGBO(170, 0, 35, 1),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 24),
+            const Padding(
+              padding: EdgeInsets.only(top: 24),
               child: Text(
                 "or use",
                 style: TextStyle(
@@ -212,7 +212,7 @@ class _SingUpPageState extends State<SingUpPage> {
                   onPressed: () {
                   Navigator.popAndPushNamed(context, 'singInPage');
                   },
-                  label: Text(
+                  label: const Text(
                     "Sing In",
                     style: TextStyle(
                         fontSize: 16,
