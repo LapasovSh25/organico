@@ -5,10 +5,12 @@ import 'package:organico/provider/info_page_provider/info_page_provider.dart';
 import 'package:provider/provider.dart';
 
 class InfoPage extends StatelessWidget {
-  const InfoPage({super.key});
+  final Map<String, dynamic> data;
+  const InfoPage({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
+    InfoPageProvider infoProvider = Provider.of<InfoPageProvider>(context);
     return ChangeNotifierProvider(
       create: (context) => InfoPageProvider(),
       builder: (context, child) {
@@ -19,11 +21,12 @@ class InfoPage extends StatelessWidget {
             elevation: 0,
             actions: [
               IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.favorite_outline,
-                  color: Colors.black,
-                ),
+                onPressed: () {
+                  infoProvider.addToWishList(data);
+                },
+                icon: infoProvider.wishList.contains(data)
+                      ? const Icon(Icons.favorite_outlined, color: Colors.red,)
+                      : const Icon(Icons.favorite_outline_sharp)
               ),
             ],
           ),
@@ -37,9 +40,8 @@ class InfoPage extends StatelessWidget {
                   child: SizedBox(
                     height: 210,
                     width: 238,
-                    child: Image.asset(
-                      "assets/paprika.png",
-                      filterQuality: FilterQuality.high,
+                    child: Image.network(
+                      data['img'].toString(),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -47,18 +49,17 @@ class InfoPage extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                const Text(
-                  "Paprika",
-                  style: TextStyle(
-                      fontSize: 24, fontWeight: FontWeight.w700),
+                Text(
+                  data['name'].toString(),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(right: 185),
+                    Padding(
+                      padding: EdgeInsets.only(right: 155),
                       child: Text(
-                        "Vegshop",
+                        data['market'].toString(),
                         style: TextStyle(
                           fontSize: 18,
                           color: Color.fromRGBO(105, 105, 116, 1),
@@ -104,7 +105,7 @@ class InfoPage extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      "S ${4.99 * context.watch<InfoPageProvider>().value} /Kg",
+                      "USD ${double.parse(data['price'].toString()) * context.watch<InfoPageProvider>().value} /Kg",
                       style: const TextStyle(
                           fontSize: 24, fontWeight: FontWeight.w700),
                     ),
@@ -115,8 +116,7 @@ class InfoPage extends StatelessWidget {
                 ),
                 const Text(
                   'Details',
-                  style: TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.w700),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(
                   height: 16,
@@ -229,7 +229,7 @@ class InfoPage extends StatelessWidget {
                         backgroundColor: const Color.fromRGBO(170, 0, 35, 1),
                       ),
                     ),
-                     Container(
+                    Container(
                         width: 52,
                         height: 52,
                         decoration: BoxDecoration(

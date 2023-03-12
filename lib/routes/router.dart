@@ -3,6 +3,7 @@ import 'package:organico/view/auth/sing_in_page.dart';
 import 'package:organico/view/pages/bottomNavigationBar.dart';
 import 'package:organico/view/pages/coupons_page.dart';
 import 'package:organico/view/pages/info_page.dart';
+import 'package:organico/view/pages/wish_lists_page.dart';
 import '../view/auth/sing_up_page.dart';
 import '../view/auth/spalsh_screen.dart';
 import '../view/pages/vegatables_category_page.dart';
@@ -14,6 +15,7 @@ class RouterGenerator {
 
   RouterGenerator._init();
   Route? onGenerate(RouteSettings settings) {
+    Object? args = settings.arguments;
     switch (settings.name) {
       case 'homePage':
         return _navigate(const MainPage());
@@ -24,11 +26,13 @@ class RouterGenerator {
       case 'splashScreen':
         return _navigate(const SplashScreen());
       case 'NavigationBarPage':
-        return _navigate(HomePage());
+        return _navigate( HomePage());
+        case 'WishList':
+        return _navigate(const WishListPage());
       case 'InfoPage':
-        return _navigate(const InfoPage());
-      case 'VegatablesPage':
-        return _navigate(const VegetablesPage());
+        return _navigate(InfoPage(data: args as Map<String, dynamic>,));
+      // case 'VegatablesPage':
+      //   return _navigate( VegetablesCategoryPage(categoryName: '', streamData: ,));
       case 'CuponsPage':
         return _navigate(const CuponsPage());
     }

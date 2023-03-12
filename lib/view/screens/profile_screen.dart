@@ -156,7 +156,11 @@ class ProfilePage extends StatelessWidget {
                               fontSize: 16, fontStyle: FontStyle.normal)),
                       SizedBox(
                           width: MediaQuery.of(context).size.width * 0.445),
-                      const Icon(Icons.arrow_forward_ios_outlined),
+                      InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, 'WishList');
+                          },
+                          child: Icon(Icons.arrow_forward_ios_outlined)),
                     ],
                   ),
                   const SizedBox(
